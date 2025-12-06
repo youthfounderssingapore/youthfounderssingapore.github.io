@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/* FIXED SIDEBAR (same alignment as home page) */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 60px;   /* matches screenshot spacing */
+}
+
+/* Logo */
+.logo {
+  width: 90px;
+  max-width: 90px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Sidebar links */
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* EVENTS LIST AREA */
+.events-container {
+  margin-left: 350px; /* pushes list to the right of menu bar */
+  padding: 60px 0;
+  width: calc(100% - 350px);
+  height: 100vh;
+
+  overflow-y: auto;    /* SCROLLABLE */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Individual event card */
+.event {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.event-image {
+  width: 150px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.event-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.event-date {
+  opacity: 0.6;
+  font-size: 14px;
+}
