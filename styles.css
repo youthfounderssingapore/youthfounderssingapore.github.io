@@ -9,6 +9,8 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   height: 100vh;
+
+  /* Full centering */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,20 +19,20 @@ body {
 .wrapper {
   display: flex;
   gap: 80px;
-  align-items: center;
-  justify-content: center;
+  align-items: center;     /* vertical alignment of children */
+  justify-content: center; /* horizontal alignment */
+  text-align: left;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  text-align: left;
 }
 
 .logo {
-  font-size: 12px;
-  line-height: 1.3;
+  width: 90px; /* adjust as needed */
+  height: auto;
 }
 
 .menu {
@@ -46,6 +48,11 @@ body {
   font-size: 16px;
 }
 
+.hero-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -55,10 +62,33 @@ body {
 
 .hero-image {
   width: 550px;
+  max-width: 45vw;     /* responsive */
   border-radius: 10px;
+  height: auto;
 }
 
 .title {
   font-size: 32px;
   line-height: 1.3;
+}
+
+/* Keep everything centered even when small */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .sidebar {
+    align-items: center;
+  }
+
+  .hero {
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+  }
 }
