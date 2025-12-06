@@ -4,37 +4,56 @@
   box-sizing: border-box;
 }
 
+/* Global font + background */
 body {
   background: black;
   color: white;
   font-family: Arial, sans-serif;
   height: 100vh;
 
-  /* Full centering */
+  /* Center content vertically + horizontally */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Wrapper layout */
 .wrapper {
   display: flex;
   gap: 80px;
-  align-items: center;     /* vertical alignment of children */
-  justify-content: center; /* horizontal alignment */
+  align-items: center;
+  justify-content: center;
   text-align: left;
 }
 
+/* Sidebar */
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
+/* Logo image fix */
 .logo {
-  width: 90px; /* adjust as needed */
+  width: 90px;      /* Adjust size here */
+  max-width: 90px;
   height: auto;
+  object-fit: contain;
+  display: block;
 }
 
+/* Links */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/* Sidebar menu links */
 .menu {
   list-style: none;
   display: flex;
@@ -43,11 +62,10 @@ body {
 }
 
 .menu a {
-  color: white;
-  text-decoration: none;
   font-size: 16px;
 }
 
+/* Hero section */
 .hero-link {
   text-decoration: none;
   color: inherit;
@@ -72,7 +90,7 @@ body {
   line-height: 1.3;
 }
 
-/* Keep everything centered even when small */
+/* Responsive layout for smaller screens */
 @media (max-width: 900px) {
   .wrapper {
     flex-direction: column;
