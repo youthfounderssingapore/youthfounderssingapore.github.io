@@ -11,19 +11,20 @@ body {
   font-family: Arial, sans-serif;
   height: 100vh;
 
-  /* Center content vertically + horizontally */
+  /* Center everything in viewport */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Wrapper layout */
+/* Wrapper aligns items at the top instead of vertically centered */
 .wrapper {
   display: flex;
   gap: 80px;
-  align-items: center;
+  align-items: flex-start;   /* TOP ALIGN to match hero image */
   justify-content: center;
   text-align: left;
+  height: 100%;
 }
 
 /* Sidebar */
@@ -33,16 +34,16 @@ body {
   gap: 40px;
 }
 
-/* Logo image fix */
+/* Logo image (scaled down even if original is huge) */
 .logo {
-  width: 90px;      /* Adjust size here */
+  width: 90px;
   max-width: 90px;
   height: auto;
   object-fit: contain;
   display: block;
 }
 
-/* Links */
+/* Global link styling */
 a {
   color: white;
   text-decoration: none;
@@ -80,7 +81,7 @@ a:active {
 
 .hero-image {
   width: 550px;
-  max-width: 45vw;     /* responsive */
+  max-width: 45vw;     /* responsive scaling */
   border-radius: 10px;
   height: auto;
 }
@@ -90,12 +91,13 @@ a:active {
   line-height: 1.3;
 }
 
-/* Responsive layout for smaller screens */
+/* Responsive layout */
 @media (max-width: 900px) {
   .wrapper {
     flex-direction: column;
     gap: 50px;
     text-align: center;
+    align-items: center;  /* reset for vertical stacking */
   }
 
   .sidebar {
