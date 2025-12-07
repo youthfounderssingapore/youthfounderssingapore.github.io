@@ -1,36 +1,33 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global font + background */
+/* GLOBAL */
 body {
   background: black;
   color: white;
   font-family: Arial, sans-serif;
   height: 100vh;
 
-  /* Center wrapper vertically + horizontally */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding-left: 240px; /* ensures content never overlaps sidebar */
 }
 
-/* Wrapper aligns child sections at the top, but wrapper itself stays centered */
-.wrapper {
-  display: flex;
-  gap: 80px;
-  align-items: flex-start;   /* top-align sidebar + hero */
-  justify-content: center;
-  text-align: left;
-
-  /* IMPORTANT: do NOT force the wrapper to fill full height */
-  /* height: 100%;  <-- removed */
-}
-
-/* Sidebar */
+/* ─────────────────────────────────────────────
+   FIXED SIDEBAR (shared across all pages)
+   ───────────────────────────────────────────── */
 .sidebar {
+  position: fixed;
+  left: 60px;       /* consistent horizontal spacing */
+  top: 50%;         /* vertically centered */
+  transform: translateY(-50%);
+
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -39,24 +36,11 @@ body {
 /* Logo */
 .logo {
   width: 90px;
-  max-width: 90px;
   height: auto;
   object-fit: contain;
-  display: block;
 }
 
-/* Global link style */
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  text-decoration: underline;
-}
-
-/* Menu */
+/* Menu links */
 .menu {
   list-style: none;
   display: flex;
@@ -65,20 +49,36 @@ a:active {
 }
 
 .menu a {
+  color: white;
+  text-decoration: none;
   font-size: 16px;
 }
 
-/* Hero section */
+.menu a:hover,
+.menu a:active {
+  text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────────
+   HOME PAGE HERO CONTENT
+   ───────────────────────────────────────────── */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: flex-start;
+  text-align: left;
+}
+
 .hero-link {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  align-items: flex-start;
 }
 
 .hero-image {
@@ -93,20 +93,25 @@ a:active {
   line-height: 1.3;
 }
 
-/* Responsive layout */
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .wrapper {
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-    align-items: center;
+  body {
+    padding-left: 0;
+    align-items: flex-start;
   }
 
   .sidebar {
-    align-items: center;
+    position: static;
+    transform: none;
+    padding: 20px;
   }
 
-  .hero {
+  .wrapper {
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 50px;
     align-items: center;
   }
 
