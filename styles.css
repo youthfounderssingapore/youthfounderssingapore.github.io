@@ -93,7 +93,7 @@ nav a {
 .hero-image {
     width: 100%;
     max-width: 900px;
-    border-radius: 12px;
+    border-radius: 7.5px;
 }
 
 .hero-title {
@@ -123,7 +123,7 @@ nav a {
 .event-card img {
     width: 150px;
     height: 150px;
-    border-radius: 12px;
+    border-radius: 7.5px;
 }
 
 .event-card div {
@@ -144,6 +144,6 @@ nav a {
 .initiative-image {
     width: 100%;
     max-width: 900px;
-    border-radius: 12px;
+    border-radius: 7.5px;
     margin-top: 20px;
 }
