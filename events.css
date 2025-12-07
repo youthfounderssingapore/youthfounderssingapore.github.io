@@ -9,30 +9,35 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   height: 100vh;
+
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* ─────────────────────────────────────────────
-   FIXED SIDEBAR — EXACT SAME PLACEMENT AS HOME PAGE
-   ───────────────────────────────────────────── */
+/* Wrapper matches home page */
+.wrapper {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Sidebar matches home page */
 .sidebar {
-  position: fixed;
-  left: 60px;                /* same horizontal position as home page */
-  top: 50%;                  /* vertically centered */
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-/* Logo */
 .logo {
   width: 90px;
+  max-width: 90px;
   height: auto;
   object-fit: contain;
 }
 
-/* Menu links */
 .menu {
   list-style: none;
   display: flex;
@@ -40,54 +45,63 @@ body {
   gap: 18px;
 }
 
-.menu a {
+a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
 }
-.menu a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-/* ─────────────────────────────────────────────
-   EVENTS CONTENT AREA
-   Resizes like the home page — centered + flexible
-   ───────────────────────────────────────────── */
-.events-container {
-  margin-left: 350px;           /* Same spacing as home page’s text block */
-  padding: 40px 60px;
-  width: calc(100% - 350px);
-  height: 100vh;
+.menu a {
+  font-size: 16px;
+}
 
+/* Events list (replaces hero) */
+.events {
   display: flex;
   flex-direction: column;
-  justify-content: center;      /* centers like home page */
-  gap: 60px;
-
-  overflow-y: auto;             /* scrolls only if content is long */
+  gap: 45px;
 }
 
 /* Event item */
 .event {
   display: flex;
-  align-items: center;
   gap: 30px;
+  align-items: center;
 }
 
 .event-image {
   width: 150px;
   height: 120px;
-  border-radius: 12px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
 .event-title {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 6px;
 }
 
 .event-date {
   opacity: 0.6;
   font-size: 14px;
+}
+
+/* Same responsive behavior as home page */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .sidebar {
+    align-items: center;
+  }
+
+  .events {
+    align-items: center;
+  }
 }
