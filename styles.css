@@ -76,11 +76,13 @@ nav a {
     height: auto;
     min-height: 100vh;
 
-    justify-content: flex-start; /* Top aligned */
-    align-items: center;         /* Same horizontal centering as other pages */
+    justify-content: flex-start; 
+    align-items: center;
 
     padding-top: 60px;
     padding-bottom: 60px;
+
+    padding-left: 70px; /* NEW — fixes alignment to match Home & Initiative */
 }
 
 /* HOME PAGE */
