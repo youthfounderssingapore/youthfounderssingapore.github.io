@@ -30,7 +30,7 @@ a:active {
     justify-content: center;   /* <-- center vertically */
     align-items: flex-start;   /* <-- keep items left aligned */
 
-    padding-left: 30px;        /* small indent so text isn’t touching the edge */
+    padding-left: 45px;        /* small indent so text isn’t touching the edge */
     box-sizing: border-box;
 }
 
@@ -48,7 +48,7 @@ nav {
 }
 
 nav a {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* CENTERING LAYOUT */
@@ -83,7 +83,7 @@ nav a {
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: 24px;   /* match Events page title */
     margin-top: 25px;
 }
 
