@@ -12,18 +12,20 @@ body {
   font-family: Arial, sans-serif;
   height: 100vh;
 
-  display: flex;
+  /* Makes room for the fixed sidebar */
+  padding-left: 240px;
 
-  padding-left: 240px; /* aligns with home page */
+  /* No centering here — the wrapper handles it */
+  display: block;
 }
 
 /* ─────────────────────────────────────────────
-   FIXED SIDEBAR (same as home page)
+   FIXED SIDEBAR — identical placement across all pages
    ───────────────────────────────────────────── */
 .sidebar {
   position: fixed;
-  left: 60px;
-  top: 50%;
+  left: 60px;          /* same horizontal position as events page */
+  top: 50%;            /* vertical center */
   transform: translateY(-50%);
   
   display: flex;
@@ -31,12 +33,14 @@ body {
   gap: 40px;
 }
 
+/* Logo */
 .logo {
   width: 90px;
   height: auto;
   object-fit: contain;
 }
 
+/* Sidebar menu */
 .menu {
   list-style: none;
   display: flex;
@@ -56,42 +60,41 @@ body {
 }
 
 /* ─────────────────────────────────────────────
-   EVENTS CONTENT AREA
+   HOME PAGE CONTENT
    ───────────────────────────────────────────── */
-.events-container {
-  padding: 60px;
-  width: 100%;
-  height: 100vh;
 
+/* Centers hero block vertically */
+.wrapper {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 60px;
-
-  overflow-y: auto;
+  justify-content: center; /* vertical centering */
+  gap: 25px;
+  text-align: left;
 }
 
-.event {
+.hero-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.event-image {
-  width: 150px;
-  height: 120px;
-  border-radius: 12px;
-  object-fit: cover;
+/* FIXED HERO IMAGE SIZE */
+.hero-image {
+  width: 420px;
+  max-width: 38vw;
+  height: auto;
+  border-radius: 10px;
 }
 
-.event-title {
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.event-date {
-  opacity: 0.6;
-  font-size: 14px;
+.title {
+  font-size: 32px;
+  line-height: 1.3;
 }
 
 /* ─────────────────────────────────────────────
@@ -108,13 +111,17 @@ body {
     padding: 20px;
   }
 
-  .events-container {
-    padding: 20px;
-    justify-content: flex-start;
+  .wrapper {
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
   }
 
-  .event {
-    flex-direction: column;
+  .hero-image {
+    max-width: 90vw;
+  }
+
+  .title {
     text-align: center;
   }
 }
