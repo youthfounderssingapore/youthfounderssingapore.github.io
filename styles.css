@@ -24,12 +24,16 @@ a:active {
     position: fixed;
     left: 0;
     top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* <-- horizontally center */
     padding-top: 30px;
 }
 
 .logo {
     width: 130px;
-    margin-left: 20px;
+    cursor: pointer;
 }
 
 nav {
@@ -37,7 +41,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding-left: 20px;
+    align-items: center;  /* <-- center links horizontally */
 }
 
 nav a {
@@ -55,8 +59,8 @@ nav a {
     align-items: center;
     text-align: center;
 
-    box-sizing: border-box;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .content {
@@ -65,6 +69,10 @@ nav a {
 }
 
 /* HOME PAGE */
+.hero-clickable {
+    display: inline-block;
+}
+
 .hero-image {
     width: 100%;
     max-width: 900px;
@@ -95,6 +103,10 @@ nav a {
     width: 150px;
     height: 150px;
     border-radius: 12px;
+}
+
+.event-card div {
+    text-align: left;     /* <-- align text left */
 }
 
 .date {
