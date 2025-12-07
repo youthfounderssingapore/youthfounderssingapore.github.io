@@ -66,6 +66,12 @@ nav a {
     box-sizing: border-box;
 }
 
+/* EVENTS PAGE SHOULD NOT BE VERTICALLY CENTERED */
+.events-page {
+    justify-content: flex-start;   /* Moves events list to the top */
+    padding-top: 60px;             /* Keeps visual spacing */
+}
+
 .content {
     max-width: 900px;
     width: 100%;
