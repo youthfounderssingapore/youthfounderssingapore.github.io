@@ -27,10 +27,10 @@ a:active {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* <-- center vertically */
-    align-items: flex-start;   /* <-- keep items left aligned */
+    justify-content: center;      /* center vertically */
+    align-items: flex-start;      /* left-align content */
 
-    padding-left: 45px;        /* small indent so text isn’t touching the edge */
+    padding-left: 45px;           /* extra inner spacing */
     box-sizing: border-box;
 }
 
@@ -44,37 +44,40 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    align-items: flex-start;   /* <-- keep left aligned */
+    align-items: flex-start;
 }
 
 nav a {
-    font-size: 18px;
+    font-size: 16px;   /* reduced size per your request */
 }
 
-/* CENTERING LAYOUT */
+/* MAIN LAYOUT (default for all pages) */
 .content-wrapper {
-    margin-left: 200px; /* space for sidebar */
+    margin-left: 200px;                /* space for sidebar */
     width: calc(100vw - 200px);
     height: 100vh;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;           /* center vertically */
+    align-items: center;               /* center horizontally */
     text-align: center;
 
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* EVENTS PAGE SHOULD NOT BE VERTICALLY CENTERED */
-.events-page {
-    justify-content: flex-start;   /* Moves events list to the top */
-    padding-top: 60px;             /* Keeps visual spacing */
-}
-
 .content {
     max-width: 900px;
     width: 100%;
+}
+
+/* EVENTS PAGE: override vertical behavior */
+.events-page {
+    height: auto;                      /* allows full scrolling */
+    min-height: 100vh;                 /* keeps layout stable */
+    justify-content: flex-start;       /* content starts at top */
+    align-items: center;               /* center horizontally */
+    padding-top: 60px;
 }
 
 /* HOME PAGE */
@@ -89,14 +92,15 @@ nav a {
 }
 
 .hero-title {
-    font-size: 24px;   /* match Events page title */
+    font-size: 24px;   /* matches event item title */
     margin-top: 25px;
 }
 
-/* EVENTS */
+/* EVENTS PAGE LIST */
 .event-list {
     width: 100%;
     max-width: 900px;
+
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -115,7 +119,7 @@ nav a {
 }
 
 .event-card div {
-    text-align: left;     /* <-- align text left */
+    text-align: left;
 }
 
 .date {
@@ -123,7 +127,7 @@ nav a {
     color: #ccc;
 }
 
-/* INITIATIVE */
+/* INITIATIVE PAGE */
 .description {
     font-size: 20px;
     line-height: 1.6;
