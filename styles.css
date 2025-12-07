@@ -1,4 +1,4 @@
-/* GLOBAL -------------------------------------------------- */
+/* GLOBAL */
 body {
     margin: 0;
     background: black;
@@ -17,20 +17,19 @@ a:active {
     text-decoration: underline;
 }
 
-/* SIDEBAR -------------------------------------------------- */
+/* SIDEBAR */
 .sidebar {
     width: 200px;
     height: 100vh;
-    padding-top: 30px;
     position: fixed;
     left: 0;
     top: 0;
+    padding-top: 30px;
 }
 
 .logo {
     width: 130px;
     margin-left: 20px;
-    cursor: pointer;
 }
 
 nav {
@@ -45,42 +44,45 @@ nav a {
     font-size: 20px;
 }
 
-/* MAIN CONTENT -------------------------------------------------- */
-/* This centers everything both horizontally & vertically */
+/* CENTERING LAYOUT */
 .content-wrapper {
-    margin-left: 200px;   /* offset for sidebar */
-    height: 100vh;
+    margin-left: 200px; /* space for sidebar */
     width: calc(100vw - 200px);
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    padding: 20px;
     box-sizing: border-box;
+    padding: 20px;
 }
 
 .content {
     max-width: 900px;
+    width: 100%;
 }
 
-/* IMAGES -------------------------------------------------- */
-.hero-image,
-.initiative-image {
+/* HOME PAGE */
+.hero-image {
     width: 100%;
     max-width: 900px;
     border-radius: 12px;
-    margin-top: 30px;
 }
 
-/* EVENTS PAGE -------------------------------------------------- */
+.hero-title {
+    font-size: 48px;
+    margin-top: 25px;
+}
+
+/* EVENTS */
 .event-list {
+    width: 100%;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 100%;
-    max-width: 900px;
 }
 
 .event-card {
@@ -96,6 +98,19 @@ nav a {
 }
 
 .date {
-    margin-top: 8px;
-    color: #cccccc;
+    margin-top: 5px;
+    color: #ccc;
+}
+
+/* INITIATIVE */
+.description {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.initiative-image {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
