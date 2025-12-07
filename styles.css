@@ -27,10 +27,10 @@ a:active {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;      /* center vertically */
-    align-items: flex-start;      /* left-align content */
+    justify-content: center;
+    align-items: flex-start;
 
-    padding-left: 45px;           /* extra inner spacing */
+    padding-left: 45px;
     box-sizing: border-box;
 }
 
@@ -48,18 +48,18 @@ nav {
 }
 
 nav a {
-    font-size: 16px;   /* reduced size per your request */
+    font-size: 16px;
 }
 
-/* MAIN LAYOUT (default for all pages) */
+/* MAIN LAYOUT (default: centered both axes) */
 .content-wrapper {
-    margin-left: 200px;                /* space for sidebar */
+    margin-left: 200px;
     width: calc(100vw - 200px);
     height: 100vh;
 
     display: flex;
-    justify-content: center;           /* center vertically */
-    align-items: center;               /* center horizontally */
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
     padding: 20px;
@@ -71,17 +71,16 @@ nav a {
     width: 100%;
 }
 
+/* EVENTS PAGE OVERRIDES */
 .events-page {
     height: auto;
     min-height: 100vh;
 
-    justify-content: flex-start;       
-    align-items: center;
+    justify-content: flex-start; /* Top aligned */
+    align-items: center;         /* Same horizontal centering as other pages */
 
-    padding-top: 120px;          /* increased — matches Home/Initiative spacing */
-    padding-left: 20px;          /* match the natural content width */
-    padding-right: 20px;
-    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 /* HOME PAGE */
@@ -96,7 +95,7 @@ nav a {
 }
 
 .hero-title {
-    font-size: 24px;   /* matches event item title */
+    font-size: 24px;
     margin-top: 25px;
 }
 
@@ -108,9 +107,12 @@ nav a {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    align-items: flex-start;  /* Ensures left edge aligns with Home/Initiative */
 }
 
 .event-card {
+    width: 100%;             /* Forces both image + text to align with page content */
     display: flex;
     align-items: center;
     gap: 20px;
