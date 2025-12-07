@@ -71,13 +71,17 @@ nav a {
     width: 100%;
 }
 
-/* EVENTS PAGE: override vertical behavior */
 .events-page {
-    height: auto;                      /* allows full scrolling */
-    min-height: 100vh;                 /* keeps layout stable */
-    justify-content: flex-start;       /* content starts at top */
-    align-items: center;               /* center horizontally */
-    padding-top: 60px;
+    height: auto;
+    min-height: 100vh;
+
+    justify-content: flex-start;       
+    align-items: center;
+
+    padding-top: 120px;          /* increased — matches Home/Initiative spacing */
+    padding-left: 20px;          /* match the natural content width */
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 /* HOME PAGE */
