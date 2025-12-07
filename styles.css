@@ -27,8 +27,11 @@ a:active {
 
     display: flex;
     flex-direction: column;
-    align-items: center;   /* <-- horizontally center */
-    padding-top: 30px;
+    justify-content: center;   /* <-- center vertically */
+    align-items: flex-start;   /* <-- keep items left aligned */
+
+    padding-left: 30px;        /* small indent so text isn’t touching the edge */
+    box-sizing: border-box;
 }
 
 .logo {
@@ -41,7 +44,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    align-items: center;  /* <-- center links horizontally */
+    align-items: flex-start;   /* <-- keep left aligned */
 }
 
 nav a {
