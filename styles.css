@@ -1,127 +1,103 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* GLOBAL */
 body {
-  background: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  height: 100vh;
-
-  /* Makes room for the fixed sidebar */
-  padding-left: 240px;
-
-  /* No centering here — the wrapper handles it */
-  display: block;
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-/* ─────────────────────────────────────────────
-   FIXED SIDEBAR — identical placement across all pages
-   ───────────────────────────────────────────── */
 .sidebar {
-  position: fixed;
-  left: 60px;          /* same horizontal position as events page */
-  top: 50%;            /* vertical center */
-  transform: translateY(-50%);
-  
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
-/* Logo */
 .logo {
-  width: 90px;
-  height: auto;
-  object-fit: contain;
+    width: 130px;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
-/* Sidebar menu */
-.menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+nav {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 20px;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.menu a:hover,
-.menu a:active {
-  text-decoration: underline;
+nav a:hover,
+nav a:focus,
+nav a:active {
+    text-decoration: underline;
 }
 
-/* ─────────────────────────────────────────────
-   HOME PAGE CONTENT
-   ───────────────────────────────────────────── */
-
-/* Centers hero block vertically */
-.wrapper {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical centering */
-  gap: 25px;
-  text-align: left;
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    max-width: 900px;
 }
 
-.hero-link {
-  color: inherit;
-  text-decoration: none;
+h1 {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 1.4;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-/* FIXED HERO IMAGE SIZE */
 .hero-image {
-  width: 420px;
-  max-width: 38vw;
-  height: auto;
-  border-radius: 10px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 30px;
+    cursor: pointer;
 }
 
-.title {
-  font-size: 32px;
-  line-height: 1.3;
+/* Events page */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-/* ─────────────────────────────────────────────
-   RESPONSIVE
-   ───────────────────────────────────────────── */
-@media (max-width: 900px) {
-  body {
-    padding-left: 0;
-  }
+.event-card {
+    display: flex;
+    gap: 20px;
+    color: white;
+    text-decoration: none;
+}
 
-  .sidebar {
-    position: static;
-    transform: none;
-    padding: 20px;
-  }
+.event-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+}
 
-  .wrapper {
-    height: auto;
-    padding-top: 20px;
-    align-items: center;
-  }
+.event-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
 
-  .hero-image {
-    max-width: 90vw;
-  }
+.date {
+    margin-top: 8px;
+    color: #cccccc;
+}
 
-  .title {
-    text-align: center;
-  }
+/* Initiative page */
+.description {
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.initiative-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 30px;
 }
