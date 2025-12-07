@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="events.css" />
-  <title>Events</title>
+    <meta charset="UTF-8">
+    <title>All Events – Youth Founders Singapore</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <main class="wrapper">
 
-    <!-- Sidebar (same as home page) -->
-    <nav class="sidebar">
-      <a href="index.html" class="logo-link">
-        <img src="FullLogo_Black.png" alt="Logo" class="logo">
-      </a>
+<div class="sidebar">
+    <a href="index.html">
+        <img src="logo.png" alt="Youth Founders Singapore" class="logo">
+    </a>
 
-      <ul class="menu">
-        <li><a href="events.html">All events</a></li>
-        <li><a href="#">The initiative</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
+    <nav>
+        <a href="events.html">All events</a>
+        <a href="initiative.html">The initiative</a>
+        <a href="contact.html">Contact us</a>
     </nav>
+</div>
 
-    <!-- Events list (replaces hero) -->
-    <section class="events">
-      <div class="event">
-        <img src="hero.png" class="event-image">
-        <div>
-          <h2 class="event-title">Startup Discovery Day</h2>
-          <p class="event-date">December 10, 2026</p>
-        </div>
-      </div>
+<div class="content">
+    <div class="event-list">
 
-      <div class="event">
-        <img src="zebra.png" class="event-image">
-        <div>
-          <h2 class="event-title">Marketing and Engagement Workshop</h2>
-          <p class="event-date">December 11, 2026</p>
-        </div>
-      </div>
-    </section>
+        <a class="event-card" href="event1.html">
+            <img src="event1.jpg" alt="Event Image">
+            <div>
+                <h2>Startup Discovery Day: Explore Treasure Together</h2>
+                <p class="date">December 10, 2026</p>
+            </div>
+        </a>
 
-  </main>
+        <a class="event-card" href="event2.html">
+            <img src="event2.jpg" alt="Event Image">
+            <div>
+                <h2>Marketing and Engagement Workshop</h2>
+                <p class="date">December 11, 2026</p>
+            </div>
+        </a>
+
+        <a class="event-card" href="event3.html">
+            <img src="event3.jpg" alt="Event Image">
+            <div>
+                <h2>Startup Stories from Venture Capitals: A16z</h2>
+                <p class="date">December 15, 2026</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
 </body>
 </html>
